@@ -1,0 +1,11 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.outsource-consultants.com/what-we-do/cx-strategy/#service",
+  "name": "CX Strategy",
+  "provider": {
+    "@id": "https://www.outsource-consultants.com/#organization"
+  },
+  "url": "https://www.outsource-consultants.com/what-we-do/cx-strategy/",
+  "description": "CX strategy advisory that combines contact center outsourcing and CX/AI technology to create a clear path to CX success within budget and time constraints."
+}
