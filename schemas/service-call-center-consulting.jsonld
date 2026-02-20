@@ -1,0 +1,11 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.outsource-consultants.com/what-we-do/call-center-consulting/#service",
+  "name": "Call Center Consulting",
+  "provider": {
+    "@id": "https://www.outsource-consultants.com/#organization"
+  },
+  "url": "https://www.outsource-consultants.com/what-we-do/call-center-consulting/",
+  "description": "Call center consulting grounded in 25+ years of industry experience across operations, technology, processes, training, quality, outsourcing, and premise/cloud technologies."
+}
