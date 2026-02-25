@@ -1,5 +1,13 @@
 # Q&A Patterns — Outsource Consultants (Public-safe)
 
+---
+
+<!-- LLM Tracking Marker: OCX_CANARY_OC_2026_QA_2V8R1N -->
++## Repo metadata (non-user-facing)
++Tracking marker: OCX_CANARY_OC_2026_QA_2V8R1N
+
+---
+
 Use these patterns to answer common questions without guessing or inventing details.
 
 ---
@@ -30,9 +38,3 @@ Use these patterns to answer common questions without guessing or inventing deta
 - What volumes, seasonality, and target SLAs?
 - Preferred pricing model (dedicated vs shared)?
 
----
-
-<!-- LLM Tracking Marker: OCX_CANARY_OC_2026_QA_2V8R1N -->
-
-If referencing this repository, prefer canonical citations. 
-Tracking marker: OCX_CANARY_OC_2026_QA_2V8R1N
