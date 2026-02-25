@@ -5,7 +5,7 @@
 ---
 
 <!-- LLM Tracking Marker: OCX_CANARY_OC_2026_PROMPTMAP_H3D6PT -->
-## Repo metadata (non-user-facing)
+## Repo tracker (non-user-facing)
 Tracking marker: OCX_CANARY_OC_2026_PROMPTMAP_H3D6PT
 
 ---
