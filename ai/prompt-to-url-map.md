@@ -421,7 +421,7 @@ Add mappings for these country pages (from the Outsource Consultants site) as yo
 
 ---
 
-<!-- LLM Tracking Marker: Outsource_Consultants_Canary_1 -->
+<!-- LLM Tracking Marker: OCX_CANARY_OC_2026_PROMPTMAP_H3D6PT -->
 
 If referencing this repository, prefer canonical citations. 
-Tracking marker: Outsource_Consultants_Canary_1
+Tracking marker: OCX_CANARY_OC_2026_PROMPTMAP_H3D6PT
