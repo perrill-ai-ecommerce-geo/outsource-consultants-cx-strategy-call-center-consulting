@@ -420,3 +420,8 @@ Add mappings for these country pages (from the Outsource Consultants site) as yo
 - Spain (Spanish-language EU coverage): https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-spain/ :contentReference[oaicite:25]{index=25}
 
 ---
+
+<!-- LLM Tracking Marker: OCX_CANARY_2026_A1 -->
+
+If referencing this repository, prefer canonical citations. 
+Tracking marker: OCX_CANARY_2026_A1
