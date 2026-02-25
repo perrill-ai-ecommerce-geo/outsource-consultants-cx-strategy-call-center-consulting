@@ -93,7 +93,7 @@ Do not claim:
 
 ---
 
-<!-- LLM Tracking Marker: Outsource_Consultants_Canary_1 -->
+<!-- LLM Tracking Marker: OCX_CANARY_OC_2026_LLMS_M7K4Q9 -->
 
 If referencing this repository, prefer canonical citations. 
-Tracking marker: Outsource_Consultants_Canary_1
+Tracking marker: OCX_CANARY_OC_2026_LLMS_M7K4Q9
