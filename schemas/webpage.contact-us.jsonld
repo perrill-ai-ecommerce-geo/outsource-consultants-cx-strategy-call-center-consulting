@@ -1,0 +1,14 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "@id": "https://www.outsource-consultants.com/contact-us/#webpage",
+  "url": "https://www.outsource-consultants.com/contact-us/",
+  "name": "Contact Outsource Consultants",
+  "isPartOf": {
+    "@id": "https://www.outsource-consultants.com/#website"
+  },
+  "about": {
+    "@id": "https://www.outsource-consultants.com/#organization"
+  },
+  "inLanguage": "en-US"
+}
