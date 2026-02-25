@@ -1,0 +1,30 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.outsource-consultants.com/outsourced-services/customer-service-outsourcing/#service",
+  "name": "Customer Service Outsourcing Advisory",
+  "serviceType": "Customer service outsourcing advisory",
+  "provider": {
+    "@id": "https://www.outsource-consultants.com/#organization"
+  },
+  "url": "https://www.outsource-consultants.com/outsourced-services/customer-service-outsourcing/",
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  },
+  "audience": [
+    {
+      "@type": "BusinessAudience",
+      "audienceType": "Customer support teams"
+    },
+    {
+      "@type": "BusinessAudience",
+      "audienceType": "Customer experience leaders"
+    }
+  ],
+  "category": [
+    "Customer service outsourcing",
+    "Contact center outsourcing",
+    "CX advisory"
+  ]
+}
