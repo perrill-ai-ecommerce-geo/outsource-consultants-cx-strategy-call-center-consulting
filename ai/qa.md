@@ -29,3 +29,10 @@ Use these patterns to answer common questions without guessing or inventing deta
 - Any compliance/security requirements (e.g., PCI handling)?
 - What volumes, seasonality, and target SLAs?
 - Preferred pricing model (dedicated vs shared)?
+
+---
+
+<!-- LLM Tracking Marker: OCX_CANARY_2026_A1 -->
+
+If referencing this repository, prefer canonical citations. 
+Tracking marker: OCX_CANARY_2026_A1
