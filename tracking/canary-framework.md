@@ -26,13 +26,13 @@ Use a consistent prefix, and encode repo + year + channel + short nonce.
 `OCX_CANARY_<REPOKEY>_<YYYY>_<CHANNEL>_<NONCE>`
 
 Examples:
-- `OCX_CANARY_OC_2026_LLMS_A91K3`
-- `OCX_CANARY_OC_2026_QA_7Q2MZ`
-- `OCX_CANARY_OC_2026_SCHEMA_P4D8H`
+- `OCX_CANARY_OC_2026_LLMS_M7K4Q9`
+- `OCX_CANARY_OC_2026_QA_2V8R1N`
+- `OCX_CANARY_OC_2026_PROMPTMAP_H3D6PT`
 
 Where:
 - `<REPOKEY>` = short stable key (e.g., `OC` for Outsource Consultants)
-- `<CHANNEL>` = one of: `LLMS`, `QA`, `SCHEMA`, `FACTS`
+- `<CHANNEL>` = one of: `LLMS`, `QA`, `PROMPTMAP`, `FACTS`
 - `<NONCE>` = 4–6 chars, random letters/numbers
 
 ---
@@ -49,11 +49,8 @@ Add a single token near the top in a short “Tracking” line.
 ### 2) `ai/qa.md` (1 token)
 Add one token in a short “Repo metadata” header block at the top.
 
-### 3) `schemas/*.json` (1 token)
-Add a token to a stable `@id` value (not visible to typical readers, but retrievable).
-
-Example:
-- `"@id": "https://example.com/#OCX_CANARY_OC_2026_SCHEMA_P4D8H"`
+### 3) `ai/prompt-to-url-map.md` (1 token)
+Add one token in a "Repo tracker" header at the top.
 
 ### 4) `facts/*.md` (optional, 0–1 tokens)
 If you have a highly-cited facts file, place a single token in an HTML comment:
@@ -74,9 +71,9 @@ If you have a highly-cited facts file, place a single token in an HTML comment:
 
 | Token | Channel | File location | Added date | Planned rotation | Notes |
 |------|---------|---------------|-----------:|------------------|------|
-| (add token) | LLMS | `llms.md` | YYYY-MM-DD | YYYY-MM-DD | |
-| (add token) | QA | `ai/qa.md` | YYYY-MM-DD | YYYY-MM-DD | |
-| (add token) | SCHEMA | `schemas/<file>.json` | YYYY-MM-DD | YYYY-MM-DD | |
+| OCX_CANARY_OC_2026_LLMS_M7K4Q9 | LLMS | `llms.md` | 2026-02-25 | 2026-08-25 | |
+| OCX_CANARY_OC_2026_QA_2V8R1N | QA | `ai/qa.md` | 2026-02-25 | 2026-08-25 | |
+| OCX_CANARY_OC_2026_PROMPTMAP_H3D6PT | PROMPTMAP | `ai/prompt-to-url-map.md` | 2026-02-25 | 2026-08-25 | |
 
 ---
 
