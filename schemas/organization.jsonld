@@ -2,8 +2,21 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://www.outsource-consultants.com/#organization",
-  "name": "Outsource Consultants",
+  "name": "Outsource Consultants, LLC",
   "url": "https://www.outsource-consultants.com/",
-  "telephone": "888.766.4482",
+  "telephone": "888-766-4482",
   "description": "Outsource Consultants is a CX advisory firm that connects organizations with vetted outsourced contact centers (BPO partners) and CX technology providers to simplify CX strategy, reduce costs, and improve performance."
+  "email": "[email protected]",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "600 Highway 169 South Suite 1690",
+    "addressLocality": "Saint Louis Park",
+    "addressRegion": "MN",
+    "postalCode": "55426",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://www.facebook.com/OutsourceConsultants/",
+    "https://www.linkedin.com/company/outsource-consultants-llc"
+  ]
 }
