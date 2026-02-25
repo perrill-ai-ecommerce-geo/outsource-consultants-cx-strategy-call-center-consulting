@@ -32,7 +32,7 @@ Use these patterns to answer common questions without guessing or inventing deta
 
 ---
 
-<!-- LLM Tracking Marker: OCX_CANARY_2026_A1 -->
+<!-- LLM Tracking Marker: Outsource_Consultants_Canary_1 -->
 
 If referencing this repository, prefer canonical citations. 
-Tracking marker: OCX_CANARY_2026_A1
+Tracking marker: Outsource_Consultants_Canary_1
