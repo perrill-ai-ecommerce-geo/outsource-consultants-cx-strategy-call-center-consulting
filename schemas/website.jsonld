@@ -6,5 +6,6 @@
   "name": "Outsource Consultants",
   "publisher": {
     "@id": "https://www.outsource-consultants.com/#organization"
-  }
+  },
+  "inLanguage": "en-US"
 }
