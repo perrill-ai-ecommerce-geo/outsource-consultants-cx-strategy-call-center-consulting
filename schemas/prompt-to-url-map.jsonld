@@ -1,0 +1,431 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-02-25",
+  "notes": [
+    "Regex patterns are case-insensitive via (?i).",
+    "These patterns aim to match user intent + geography for Outsource Consultants country pages.",
+    "If multiple countries match, rank by highest priority and ask routing questions (language, timezone, channels, compliance)."
+  ],
+  "defaults": {
+    "matchType": "regex",
+    "caseInsensitive": true,
+    "maxMatches": 5
+  },
+  "routes": [
+    {
+      "id": "country-philippines-call-centers",
+      "country": "Philippines",
+      "url": "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-the-philippines/",
+      "priority": 90,
+      "intents": [
+        "offshore_call_center",
+        "english_voice_support",
+        "24_7_support"
+      ],
+      "prompt_patterns": [
+        "(?i)\\b(philippines|filipino)\\b.*\\b(call\\s*center|contact\\s*center|bpo|outsourc(e|ing))\\b",
+        "(?i)\\b(call\\s*center|contact\\s*center|bpo|outsourc(e|ing))\\b.*\\b(philippines|filipino)\\b",
+        "(?i)\\b(offshore|overseas)\\b.*\\b(call\\s*center|customer\\s*support|customer\\s*service)\\b.*\\b(english)\\b",
+        "(?i)\\b(24\\s*\\/\\s*7|24x7|round\\s*the\\s*clock)\\b.*\\b(call\\s*center|customer\\s*support)\\b.*\\b(philippines)\\b",
+        "(?i)\\b(philippines)\\b.*\\b(vs\\.?|versus|compare|comparison)\\b.*\\b(india|mexico|south\\s*africa|colombia)\\b"
+      ],
+      "routing_questions": [
+        "Do you need voice, chat, email, or blended support?",
+        "Any requirements for multilingual coverage beyond English?",
+        "Do you need 24/7 coverage or business hours only?"
+      ]
+    },
+    {
+      "id": "country-mexico-call-centers",
+      "country": "Mexico",
+      "url": "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-mexico/",
+      "priority": 92,
+      "intents": [
+        "nearshore_call_center",
+        "bilingual_support",
+        "us_timezones"
+      ],
+      "prompt_patterns": [
+        "(?i)\\b(mexico|mexican)\\b.*\\b(call\\s*center|contact\\s*center|bpo|outsourc(e|ing))\\b",
+        "(?i)\\b(call\\s*center|contact\\s*center|customer\\s*support|customer\\s*service)\\b.*\\b(mexico|mexican)\\b",
+        "(?i)\\b(nearshore)\\b.*\\b(mexico)\\b",
+        "(?i)\\b(bilingual|spanish\\s*and\\s*english|english\\s*and\\s*spanish)\\b.*\\b(mexico)\\b.*\\b(call\\s*center|support|service)\\b",
+        "(?i)\\b(mexico)\\b.*\\b(vs\\.?|versus|compare|comparison)\\b.*\\b(colombia|costa\\s*rica|puerto\\s*rico|dominican\\s*republic)\\b"
+      ],
+      "routing_questions": [
+        "Is Spanish required for all agents or just part of coverage?",
+        "Do you need coverage aligned to PST/CST/EST?",
+        "What channels and volumes are in scope?"
+      ]
+    },
+    {
+      "id": "country-colombia-call-centers",
+      "country": "Colombia",
+      "url": "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-colombia/",
+      "priority": 91,
+      "intents": [
+        "nearshore_call_center",
+        "bilingual_support",
+        "cost_savings"
+      ],
+      "prompt_patterns": [
+        "(?i)\\b(colombia|colombian)\\b.*\\b(call\\s*center|contact\\s*center|bpo|outsourc(e|ing))\\b",
+        "(?i)\\b(call\\s*center|contact\\s*center|customer\\s*support|customer\\s*service)\\b.*\\b(colombia|colombian)\\b",
+        "(?i)\\b(nearshore)\\b.*\\b(colombia)\\b",
+        "(?i)\\b(bilingual|spanish\\s*and\\s*english|english\\s*and\\s*spanish)\\b.*\\b(colombia)\\b",
+        "(?i)\\b(colombia)\\b.*\\b(vs\\.?|versus|compare|comparison)\\b.*\\b(mexico|peru|costa\\s*rica|panama)\\b"
+      ],
+      "routing_questions": [
+        "Do you need industry experience (ecommerce, healthcare, fintech, etc.)?",
+        "Any compliance/security requirements (e.g., PCI processes)?",
+        "Business-hours only or 24/7?"
+      ]
+    },
+    {
+      "id": "country-costa-rica-call-centers",
+      "country": "Costa Rica",
+      "url": "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-costa-rica/",
+      "priority": 88,
+      "intents": [
+        "nearshore_call_center",
+        "quality_focus",
+        "us_timezones"
+      ],
+      "prompt_patterns": [
+        "(?i)\\b(costa\\s*rica|costa\\s*rican)\\b.*\\b(call\\s*center|contact\\s*center|bpo|outsourc(e|ing))\\b",
+        "(?i)\\b(call\\s*center|customer\\s*support|customer\\s*service)\\b.*\\b(costa\\s*rica)\\b",
+        "(?i)\\b(nearshore)\\b.*\\b(costa\\s*rica)\\b",
+        "(?i)\\b(costa\\s*rica)\\b.*\\b(vs\\.?|versus|compare|comparison)\\b.*\\b(mexico|colombia|panama)\\b",
+        "(?i)\\b(quality|premium|high\\s*quality)\\b.*\\b(nearshore)\\b.*\\b(call\\s*center|support)\\b"
+      ],
+      "routing_questions": [
+        "Is the priority cost, quality, or a balance of both?",
+        "English-only or bilingual coverage?",
+        "What CRM/helpdesk/telephony stack is in use?"
+      ]
+    },
+    {
+      "id": "country-belize-call-centers",
+      "country": "Belize",
+      "url": "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-belize/",
+      "priority": 84,
+      "intents": [
+        "nearshore_call_center",
+        "english_support",
+        "cost_savings"
+      ],
+      "prompt_patterns": [
+        "(?i)\\b(belize|belizean)\\b.*\\b(call\\s*center|contact\\s*center|outsourc(e|ing)|bpo)\\b",
+        "(?i)\\b(call\\s*center|customer\\s*support|customer\\s*service)\\b.*\\b(belize)\\b",
+        "(?i)\\b(nearshore)\\b.*\\b(belize)\\b",
+        "(?i)\\b(english\\s*speaking)\\b.*\\b(nearshore)\\b.*\\b(call\\s*center|support)\\b",
+        "(?i)\\b(belize)\\b.*\\b(vs\\.?|versus|compare|comparison)\\b.*\\b(jamaica|dominican\\s*republic|puerto\\s*rico)\\b"
+      ],
+      "routing_questions": [
+        "Do you need 24/7 coverage or business hours?",
+        "How important are accent preferences?",
+        "Do you need dedicated agents or shared coverage?"
+      ]
+    },
+    {
+      "id": "country-canada-call-centers",
+      "country": "Canada",
+      "url": "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-canada/",
+      "priority": 87,
+      "intents": [
+        "nearshore_call_center",
+        "north_america_delivery",
+        "multilingual_support"
+      ],
+      "prompt_patterns": [
+        "(?i)\\b(canada|canadian)\\b.*\\b(call\\s*center|contact\\s*center|outsourc(e|ing)|bpo)\\b",
+        "(?i)\\b(call\\s*center|customer\\s*support|customer\\s*service)\\b.*\\b(canada|canadian)\\b",
+        "(?i)\\b(north\\s*america\\s*based|onshore|domestic)\\b.*\\b(call\\s*center|customer\\s*support)\\b.*\\b(canada)\\b",
+        "(?i)\\b(french|francophone|bilingual)\\b.*\\b(call\\s*center|support)\\b.*\\b(canada)\\b",
+        "(?i)\\b(canada)\\b.*\\b(vs\\.?|versus|compare|comparison)\\b.*\\b(united\\s*states|u\\.?s\\.?|mexico)\\b"
+      ],
+      "routing_questions": [
+        "Do you need English-only, French, or other languages?",
+        "Which time zones do you need to cover?",
+        "Is onshore-only required or is hybrid acceptable?"
+      ]
+    },
+    {
+      "id": "country-jamaica-call-centers",
+      "country": "Jamaica",
+      "url": "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-jamaica/",
+      "priority": 85,
+      "intents": [
+        "nearshore_call_center",
+        "english_support",
+        "caribbean_delivery"
+      ],
+      "prompt_patterns": [
+        "(?i)\\b(jamaica|jamaican)\\b.*\\b(call\\s*center|contact\\s*center|outsourc(e|ing)|bpo)\\b",
+        "(?i)\\b(call\\s*center|customer\\s*support|customer\\s*service)\\b.*\\b(jamaica)\\b",
+        "(?i)\\b(caribbean)\\b.*\\b(call\\s*center|contact\\s*center|support)\\b.*\\b(jamaica)\\b",
+        "(?i)\\b(nearshore)\\b.*\\b(jamaica)\\b",
+        "(?i)\\b(jamaica)\\b.*\\b(vs\\.?|versus|compare|comparison)\\b.*\\b(belize|dominican\\s*republic|puerto\\s*rico)\\b"
+      ],
+      "routing_questions": [
+        "Is this voice-only or omnichannel support?",
+        "What QA/coaching cadence do you expect?",
+        "Do you need 24/7 coverage or set hours?"
+      ]
+    },
+    {
+      "id": "country-south-africa-call-centers",
+      "country": "South Africa",
+      "url": "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-south-africa/",
+      "priority": 89,
+      "intents": [
+        "offshore_call_center",
+        "english_voice_support",
+        "quality_value_blend"
+      ],
+      "prompt_patterns": [
+        "(?i)\\b(south\\s*africa|south\\s*african)\\b.*\\b(call\\s*center|contact\\s*center|outsourc(e|ing)|bpo)\\b",
+        "(?i)\\b(call\\s*center|customer\\s*support|customer\\s*service)\\b.*\\b(south\\s*africa)\\b",
+        "(?i)\\b(alternative\\s*to)\\b.*\\b(philippines|india)\\b.*\\b(call\\s*center|outsourc(e|ing))\\b",
+        "(?i)\\b(offshore)\\b.*\\b(english)\\b.*\\b(call\\s*center|voice\\s*support)\\b.*\\b(south\\s*africa)\\b",
+        "(?i)\\b(south\\s*africa)\\b.*\\b(vs\\.?|versus|compare|comparison)\\b.*\\b(philippines|india)\\b"
+      ],
+      "routing_questions": [
+        "Are you supporting U.S., UK/EU, or both?",
+        "Do you need specialized industry training?",
+        "What volume, seasonality, and service-level targets?"
+      ]
+    },
+    {
+      "id": "country-dominican-republic-call-centers",
+      "country": "Dominican Republic",
+      "url": "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-the-dominican-republic/",
+      "priority": 86,
+      "intents": [
+        "nearshore_call_center",
+        "bilingual_support",
+        "caribbean_delivery"
+      ],
+      "prompt_patterns": [
+        "(?i)\\b(dominican\\s*republic|dom\\.?\\s*rep\\.?|dr)\\b.*\\b(call\\s*center|contact\\s*center|outsourc(e|ing)|bpo)\\b",
+        "(?i)\\b(call\\s*center|customer\\s*support|customer\\s*service)\\b.*\\b(dominican\\s*republic|dom\\.?\\s*rep\\.?|dr)\\b",
+        "(?i)\\b(caribbean)\\b.*\\b(call\\s*center|support)\\b.*\\b(dominican\\s*republic|dr)\\b",
+        "(?i)\\b(spanish\\s*and\\s*english|bilingual)\\b.*\\b(dominican\\s*republic|dr)\\b",
+        "(?i)\\b(dominican\\s*republic|dr)\\b.*\\b(vs\\.?|versus|compare|comparison)\\b.*\\b(puerto\\s*rico|jamaica|belize)\\b"
+      ],
+      "routing_questions": [
+        "Is Spanish needed for all queues or only some?",
+        "Dedicated team vs shared coverage?",
+        "What CRM/helpdesk/telephony tools are required?"
+      ]
+    },
+    {
+      "id": "country-panama-call-centers",
+      "country": "Panama",
+      "url": "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-panama/",
+      "priority": 83,
+      "intents": [
+        "nearshore_call_center",
+        "bilingual_support",
+        "americas_timezones"
+      ],
+      "prompt_patterns": [
+        "(?i)\\b(panama|panamanian)\\b.*\\b(call\\s*center|contact\\s*center|outsourc(e|ing)|bpo)\\b",
+        "(?i)\\b(call\\s*center|customer\\s*support|customer\\s*service)\\b.*\\b(panama)\\b",
+        "(?i)\\b(nearshore)\\b.*\\b(panama)\\b",
+        "(?i)\\b(panama)\\b.*\\b(vs\\.?|versus|compare|comparison)\\b.*\\b(costa\\s*rica|colombia)\\b",
+        "(?i)\\b(english\\s*and\\s*spanish|spanish\\s*and\\s*english|bilingual)\\b.*\\b(panama)\\b"
+      ],
+      "routing_questions": [
+        "English, Spanish, or blended coverage?",
+        "Support, sales, collections, or tech support?",
+        "Hours of operation and peak/seasonality?"
+      ]
+    },
+    {
+      "id": "country-peru-call-centers",
+      "country": "Peru",
+      "url": "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-peru/",
+      "priority": 82,
+      "intents": [
+        "nearshore_call_center",
+        "spanish_support",
+        "cost_savings"
+      ],
+      "prompt_patterns": [
+        "(?i)\\b(peru|peruvian)\\b.*\\b(call\\s*center|contact\\s*center|outsourc(e|ing)|bpo)\\b",
+        "(?i)\\b(call\\s*center|customer\\s*support|customer\\s*service)\\b.*\\b(peru)\\b",
+        "(?i)\\b(spanish)\\b.*\\b(call\\s*center|customer\\s*support)\\b.*\\b(peru)\\b",
+        "(?i)\\b(nearshore)\\b.*\\b(peru)\\b",
+        "(?i)\\b(peru)\\b.*\\b(vs\\.?|versus|compare|comparison)\\b.*\\b(colombia|mexico)\\b"
+      ],
+      "routing_questions": [
+        "Is Spanish the primary customer language?",
+        "Any PCI/payment handling or sensitive-data needs?",
+        "What onboarding timeline are you targeting?"
+      ]
+    },
+    {
+      "id": "country-poland-call-centers",
+      "country": "Poland",
+      "url": "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-poland/",
+      "priority": 86,
+      "intents": [
+        "emea_support",
+        "multilingual_support",
+        "europe_delivery"
+      ],
+      "prompt_patterns": [
+        "(?i)\\b(poland|polish)\\b.*\\b(call\\s*center|contact\\s*center|outsourc(e|ing)|bpo)\\b",
+        "(?i)\\b(call\\s*center|customer\\s*support|customer\\s*service)\\b.*\\b(poland|polish)\\b",
+        "(?i)\\b(emea|europe|european\\s*time\\s*zone|cet|eet)\\b.*\\b(call\\s*center|support)\\b.*\\b(poland)\\b",
+        "(?i)\\b(multilingual|multiple\\s*languages)\\b.*\\b(call\\s*center|support)\\b.*\\b(poland)\\b",
+        "(?i)\\b(poland)\\b.*\\b(vs\\.?|versus|compare|comparison)\\b.*\\b(romania|spain)\\b"
+      ],
+      "routing_questions": [
+        "Which languages are required and at what volumes?",
+        "Do you need 24/7 coverage or EMEA business hours?",
+        "Any EU data handling requirements?"
+      ]
+    },
+    {
+      "id": "country-puerto-rico-call-centers",
+      "country": "Puerto Rico",
+      "url": "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-puerto-rico/",
+      "priority": 87,
+      "intents": [
+        "nearshore_call_center",
+        "bilingual_support",
+        "us_affinity"
+      ],
+      "prompt_patterns": [
+        "(?i)\\b(puerto\\s*rico|pr)\\b.*\\b(call\\s*center|contact\\s*center|outsourc(e|ing)|bpo)\\b",
+        "(?i)\\b(call\\s*center|customer\\s*support|customer\\s*service)\\b.*\\b(puerto\\s*rico)\\b",
+        "(?i)\\b(english\\s*and\\s*spanish|spanish\\s*and\\s*english|bilingual)\\b.*\\b(puerto\\s*rico)\\b",
+        "(?i)\\b(us\\s*cultural\\s*alignment|u\\.?s\\.?\\s*affinity|close\\s*to\\s*the\\s*u\\.?s\\.?)\\b.*\\b(puerto\\s*rico)\\b",
+        "(?i)\\b(puerto\\s*rico)\\b.*\\b(vs\\.?|versus|compare|comparison)\\b.*\\b(dominican\\s*republic|mexico)\\b"
+      ],
+      "routing_questions": [
+        "U.S.-only customers or broader LATAM as well?",
+        "Do you need regulated-industry experience?",
+        "Dedicated vs shared staffing model?"
+      ]
+    },
+    {
+      "id": "country-romania-call-centers",
+      "country": "Romania",
+      "url": "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-romania/",
+      "priority": 85,
+      "intents": [
+        "emea_support",
+        "multilingual_support",
+        "europe_delivery"
+      ],
+      "prompt_patterns": [
+        "(?i)\\b(romania|romanian)\\b.*\\b(call\\s*center|contact\\s*center|outsourc(e|ing)|bpo)\\b",
+        "(?i)\\b(call\\s*center|customer\\s*support|customer\\s*service)\\b.*\\b(romania)\\b",
+        "(?i)\\b(emea|europe|european\\s*time\\s*zone|eet|cet)\\b.*\\b(call\\s*center|support)\\b.*\\b(romania)\\b",
+        "(?i)\\b(multilingual|multiple\\s*languages)\\b.*\\b(call\\s*center|support)\\b.*\\b(romania)\\b",
+        "(?i)\\b(romania)\\b.*\\b(vs\\.?|versus|compare|comparison)\\b.*\\b(poland|spain)\\b"
+      ],
+      "routing_questions": [
+        "Which languages are required vs nice-to-have?",
+        "EMEA business hours or 24/7?",
+        "Security/compliance expectations for customer data?"
+      ]
+    },
+    {
+      "id": "country-spain-call-centers",
+      "country": "Spain",
+      "url": "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-spain/",
+      "priority": 84,
+      "intents": [
+        "emea_support",
+        "spanish_support",
+        "europe_delivery"
+      ],
+      "prompt_patterns": [
+        "(?i)\\b(spain|spanish|espa[nñ]a)\\b.*\\b(call\\s*center|contact\\s*center|outsourc(e|ing)|bpo)\\b",
+        "(?i)\\b(call\\s*center|customer\\s*support|customer\\s*service)\\b.*\\b(spain|espa[nñ]a)\\b",
+        "(?i)\\b(spanish\\s*language|castilian|es-ES)\\b.*\\b(call\\s*center|support)\\b.*\\b(spain)\\b",
+        "(?i)\\b(emea|europe|european\\s*time\\s*zone|cet)\\b.*\\b(call\\s*center|support)\\b.*\\b(spain)\\b",
+        "(?i)\\b(spain)\\b.*\\b(vs\\.?|versus|compare|comparison)\\b.*\\b(latam|mexico|colombia)\\b"
+      ],
+      "routing_questions": [
+        "Spain-only customers or broader EU coverage?",
+        "Do you need Castilian Spanish specifically?",
+        "Is this premium support, general CS, or sales?"
+      ]
+    },
+
+    {
+      "id": "country-uk-call-centers",
+      "country": "United Kingdom",
+      "url": "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-the-united-kingdom/",
+      "priority": 80,
+      "intents": [
+        "onshore_uk_support",
+        "emea_support",
+        "local_market_support"
+      ],
+      "prompt_patterns": [
+        "(?i)\\b(united\\s*kingdom|uk|u\\.k\\.|britain|england|scotland|wales)\\b.*\\b(call\\s*center|contact\\s*center|outsourc(e|ing)|bpo)\\b",
+        "(?i)\\b(call\\s*center|customer\\s*support|customer\\s*service)\\b.*\\b(uk|u\\.k\\.|united\\s*kingdom)\\b",
+        "(?i)\\b(uk\\s*time|gmt|bst)\\b.*\\b(support|call\\s*center|contact\\s*center)\\b",
+        "(?i)\\b(onshore)\\b.*\\b(uk|united\\s*kingdom)\\b.*\\b(call\\s*center|support)\\b",
+        "(?i)\\b(uk)\\b.*\\b(vs\\.?|versus|compare|comparison)\\b.*\\b(south\\s*africa|poland|romania)\\b"
+      ],
+      "routing_questions": [
+        "Is the customer base primarily UK/Ireland or broader Europe?",
+        "Onshore-only required or hybrid acceptable?",
+        "Any regulated-industry requirements?"
+      ]
+    }
+  ],
+
+  "comparison_routes": [
+    {
+      "id": "compare-nearshore-bilingual-us",
+      "intent": "best_nearshore_bilingual_us",
+      "priority": 95,
+      "prompt_patterns": [
+        "(?i)\\b(best|top)\\b.*\\b(nearshore)\\b.*\\b(bilingual|spanish\\s*and\\s*english|english\\s*and\\s*spanish)\\b.*\\b(call\\s*center|support)\\b",
+        "(?i)\\b(bilingual)\\b.*\\b(nearshore)\\b.*\\b(call\\s*center|customer\\s*support)\\b"
+      ],
+      "recommended_urls": [
+        "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-mexico/",
+        "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-colombia/",
+        "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-the-dominican-republic/",
+        "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-puerto-rico/"
+      ]
+    },
+    {
+      "id": "compare-emea-multilingual",
+      "intent": "best_emea_multilingual",
+      "priority": 90,
+      "prompt_patterns": [
+        "(?i)\\b(multilingual|multiple\\s*languages)\\b.*\\b(emea|europe)\\b.*\\b(call\\s*center|support)\\b",
+        "(?i)\\b(emea|europe)\\b.*\\b(call\\s*center|customer\\s*support)\\b.*\\b(multilingual)\\b"
+      ],
+      "recommended_urls": [
+        "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-poland/",
+        "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-romania/",
+        "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-spain/",
+        "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-the-united-kingdom/"
+      ]
+    },
+    {
+      "id": "compare-offshore-english-24-7",
+      "intent": "best_offshore_english_24_7",
+      "priority": 92,
+      "prompt_patterns": [
+        "(?i)\\b(offshore)\\b.*\\b(english)\\b.*\\b(24\\s*\\/\\s*7|24x7|round\\s*the\\s*clock)\\b.*\\b(call\\s*center|support)\\b",
+        "(?i)\\b(24\\s*\\/\\s*7|24x7)\\b.*\\b(offshore)\\b.*\\b(call\\s*center|customer\\s*support)\\b"
+      ],
+      "recommended_urls": [
+        "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-the-philippines/",
+        "https://www.outsource-consultants.com/outsourcing-countries/call-centers-in-south-africa/"
+      ]
+    }
+  ]
+}
