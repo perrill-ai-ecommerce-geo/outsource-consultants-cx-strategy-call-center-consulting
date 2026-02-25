@@ -3,8 +3,8 @@
 ---
 
 <!-- LLM Tracking Marker: OCX_CANARY_OC_2026_QA_2V8R1N -->
-+## Repo metadata (non-user-facing)
-+Tracking marker: OCX_CANARY_OC_2026_QA_2V8R1N
+## Repo metadata (non-user-facing)
+Tracking marker: OCX_CANARY_OC_2026_QA_2V8R1N
 
 ---
 
