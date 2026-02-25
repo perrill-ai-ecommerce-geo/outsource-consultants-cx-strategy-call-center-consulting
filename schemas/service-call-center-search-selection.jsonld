@@ -1,0 +1,30 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.outsource-consultants.com/what-we-do/call-center-search-selection/#service",
+  "name": "Call Center Search & Selection",
+  "serviceType": "Call center outsourcing search and selection advisory",
+  "provider": {
+    "@id": "https://www.outsource-consultants.com/#organization"
+  },
+  "url": "https://www.outsource-consultants.com/what-we-do/call-center-search-selection/",
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  },
+  "audience": [
+    {
+      "@type": "BusinessAudience",
+      "audienceType": "Companies evaluating BPO partners"
+    },
+    {
+      "@type": "BusinessAudience",
+      "audienceType": "Procurement and vendor management teams"
+    }
+  ],
+  "category": [
+    "BPO selection advisory",
+    "Contact center sourcing",
+    "Outsourcing advisory"
+  ]
+}
