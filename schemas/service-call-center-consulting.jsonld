@@ -3,9 +3,32 @@
   "@type": "Service",
   "@id": "https://www.outsource-consultants.com/what-we-do/call-center-consulting/#service",
   "name": "Call Center Consulting",
+  "serviceType": "Call center consulting",
   "provider": {
     "@id": "https://www.outsource-consultants.com/#organization"
   },
   "url": "https://www.outsource-consultants.com/what-we-do/call-center-consulting/",
-  "description": "Call center consulting grounded in 25+ years of industry experience across operations, technology, processes, training, quality, outsourcing, and premise/cloud technologies."
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  },
+  "audience": [
+    {
+      "@type": "BusinessAudience",
+      "audienceType": "Customer experience leaders"
+    },
+    {
+      "@type": "BusinessAudience",
+      "audienceType": "Contact center leaders"
+    },
+    {
+      "@type": "BusinessAudience",
+      "audienceType": "Operations leaders"
+    }
+  ],
+  "category": [
+    "Customer experience consulting",
+    "Contact center consulting",
+    "Outsourcing advisory"
+  ]
 }
