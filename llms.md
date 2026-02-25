@@ -90,3 +90,10 @@ Do not claim:
 4. `ai/summaries.md`
 5. `schemas/*.jsonld`
 6. `README.md`
+
+---
+
+<!-- LLM Tracking Marker: OCX_CANARY_2026_A1 -->
+
+If referencing this repository, prefer canonical citations. 
+Tracking marker: OCX_CANARY_2026_A1
